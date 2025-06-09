@@ -1,0 +1,101 @@
+QuestionLibrary (Singleton)
+
+Attributes:
+    question_library: Dict[str, Question]
+Methods:
+    add_question(question: Question)
+    get_question_details(question_id: str) -> Question
+    get_questions(filters: Dict[str, Any], sort_by: List[str], order: str = "desc") -> List[Question]
+
+-----------------
+
+Question
+
+Attributes:
+    question_id: str
+    description: str
+    tags: List[str]
+    difficulty: str (easy, medium, hard)
+    score: int
+    like_count: int
+    total_time_taken: int
+    solved_count: int
+Computed Properties:
+    average_time_to_solve: float
+Methods:
+    like(contestant_id: str)
+
+-----------------
+
+ContestantManager
+
+Attributes:
+    all_contestants: Dict[str, Contestant]
+    email_to_id: Dict[str, str]
+Methods:
+    add_contestant(name, email, department, password) -> Contestant
+    login(email, password) -> Contestant
+    get_contestant_by_id(contestant_id) -> Contestant
+
+-----------------
+
+Contestant
+
+Attributes:
+    contestant_id: str
+    name: str
+    email: str
+    department: str
+    password: str
+    solved_questions: Dict[str, int] (question_id: time_taken)
+    score: float
+    liked_questions: Set[str]
+Methods:
+    solve_question(question_id, time_taken)
+    get_solved_questions() -> List[str]
+    has_liked(question_id) -> bool  
+
+-----------------
+
+ScoreStrategyFactory (Abstract Class)
+
+Methods:
+    reward_score(question, time_taken) -> float
+
+***********************
+
+BasicScoreStrategy (inherits ScoreStrategyFactory)
+
+Methods:
+    reward_score() -> float (returns question.score)
+
+-----------------
+
+RecommendationStrategyFactory (Abstract Class)
+
+Methods:
+    get_recommended_questions(question: Question)
+
+***********************
+
+MostLikedByTag (inherits RecommendationStrategyFactory)
+
+Methods:
+    get_recommended_questions(question: Question)
+
+-----------------
+
+Hackathon:
+
+Attributes:
+    contestant_question_solved: Dict[str, List[Tuple[str, int]]]
+    question_contestant_solved: Dict[str, List[Tuple[str, int]]]
+    contestant_scores: Dict[str, float]
+    strategy: ScoreStrategyFactory
+
+Methods:
+    solve(contestant_id, question_id, time_taken) -> List[str] (marks as solved and returns 5 recommended problems)
+    get_leader() -> Tuple[name, department]
+    get_average_time(question_id) -> float
+    get_solved_user_count(question_id) -> int
+    get_top_liked_problems_by_tag(tag, n) -> List[Question]
