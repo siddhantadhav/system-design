@@ -28,7 +28,8 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 **Resources**
 
 - *Computer Networking: A Top-Down Approach* — Kurose, Ross
-- *Operating Systems: Three Easy Pieces* (free online)
+- *Operating Systems: Three Easy Pieces* — pages.cs.wisc.edu/~remzi/OSTEP/ (free)
+- *High Performance Browser Networking* — Ilya Grigorik (free at hpbn.co) — the definitive networking book for backend engineers
 - Hussein Nasser — YouTube (networking deep dives)
 - "Latency Numbers Every Programmer Should Know" — Jeff Dean
 - Julia Evans — zines and blog posts (jvns.ca)
@@ -53,11 +54,11 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 
 **Resources**
 
-- *Head First Design Patterns* — Freeman, Robson
+- *Head First Design Patterns* — Freeman, Robson (2nd ed., 2020)
 - *Design Patterns: Elements of Reusable Object-Oriented Software* — Gang of Four
 - *Clean Code* — Robert C. Martin
-- *Refactoring* — Martin Fowler (2nd ed.)
-- *The Pragmatic Programmer* — Hunt, Thomas
+- *Refactoring* — Martin Fowler (2nd ed., 2018)
+- *The Pragmatic Programmer* — Hunt, Thomas (20th Anniversary Edition, 2019)
 - Refactoring.guru — design patterns reference
 
 **Projects**
@@ -87,11 +88,11 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 
 **Resources**
 
-- *Designing Data-Intensive Applications* — Martin Kleppmann (the bible — read cover to cover)
+- ***Designing Data-Intensive Applications, 2nd Edition*** — Martin Kleppmann & Chris Riccomini (O'Reilly, Feb 2026) — the bible, read cover to cover
 - *Database Internals* — Alex Petrov
 - Use The Index, Luke! — use-the-index-luke.com
-- Arpit Bhayani — YouTube (database internals)
-- CMU 15-445 Database Systems — Andy Pavlo (free lectures)
+- Asli Engineering by Arpit Bhayani — YouTube (database internals)
+- CMU 15-445 Database Systems — Andy Pavlo (free lectures, Spring 2026 current)
 - CMU 15-721 Advanced Database Systems
 
 **Projects**
@@ -122,9 +123,11 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 **Resources**
 
 - *System Design Interview Vol 1 & 2* — Alex Xu
+- *Fundamentals of Software Architecture* — Mark Richards, Neal Ford (O'Reilly, 2020)
+- *Software Architecture: The Hard Parts* — Mark Richards, Neal Ford (O'Reilly, 2021)
 - ByteByteGo — bytebytego.com + YouTube
 - The System Design Primer — github.com/donnemartin/system-design-primer
-- High Scalability — highscalability.com
+- High Scalability — highscalability.com (less active now, archive is gold)
 - Gaurav Sen — YouTube
 
 ---
@@ -149,11 +152,12 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 
 **Resources**
 
-- *Designing Data-Intensive Applications* — Kleppmann (Part II & III)
-- MIT 6.824 Distributed Systems — Robert Morris (free lectures + labs)
+- *Understanding Distributed Systems, 2nd Edition* — Roberto Vitillo (2022) — gentler intro, read first
+- *Designing Data-Intensive Applications, 2nd Edition* — Kleppmann & Riccomini (Part II & III)
+- MIT 6.5840 (formerly 6.824) Distributed Systems — Robert Morris, Frans Kaashoek (free lectures + Raft labs in Go)
 - *Distributed Systems* — Maarten van Steen, Andrew Tanenbaum (free PDF)
 - Murat Demirbas blog — muratbuffalo.blogspot.com
-- The Morning Paper — blog.acolyer.org (archived but goldmine)
+- The Morning Paper — blog.acolyer.org (archived since 2021, but archive is invaluable)
 - Aphyr's Jepsen analyses — jepsen.io
 
 **Projects**
@@ -183,7 +187,7 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 
 **Resources**
 
-- *Building Microservices* — Sam Newman (2nd ed.)
+- *Building Microservices* — Sam Newman (2nd ed., 2021)
 - *Domain-Driven Design* — Eric Evans
 - *Implementing Domain-Driven Design* — Vaughn Vernon
 - *Microservices Patterns* — Chris Richardson
@@ -220,10 +224,11 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 
 **Resources**
 
-- *Site Reliability Engineering* — Google (free online)
-- *The Site Reliability Workbook* — Google (free online)
-- *Release It!* — Michael Nygard
+- *Site Reliability Engineering* — Google (free at sre.google/books)
+- *The Site Reliability Workbook* — Google (free at sre.google/books)
+- *Release It!* — Michael Nygard (2nd ed., 2018)
 - *Database Reliability Engineering* — Campbell, Majors
+- *The DevOps Handbook* — Kim, Humble, Debois, Willis
 - OWASP — owasp.org
 - Brendan Gregg — performance and observability (brendangregg.com)
 
@@ -259,6 +264,10 @@ A structured study plan covering Low-Level Design (LLD), High-Level Design (HLD)
 
 Work through these end-to-end. Diagram, document tradeoffs, estimate capacity.
 
+**Start here:**
+
+- **Hello Interview — "System Design in a Hurry"** (free, hellointerview.com) — the single best free system design course available. Do this first.
+
 **Classic interview-style designs**
 
 - Design URL shortener (TinyURL / Bitly)
@@ -286,13 +295,12 @@ Work through these end-to-end. Diagram, document tradeoffs, estimate capacity.
 - Design Rate limiter
 - Design Newsfeed system
 
-**Resources**
+**Additional resources**
 
 - *System Design Interview Vol 1 & 2* — Alex Xu
 - ByteByteGo case studies
-- Grokking the System Design Interview — Educative
-- Hello Interview — hellointerview.com
-- Engineering blogs: Netflix, Uber, Airbnb, Stripe, Discord, Cloudflare, Meta, LinkedIn, Shopify
+- Grokking Modern System Design Interview — Educative (formerly "Grokking the System Design Interview")
+- Engineering blogs: Netflix, Uber, Stripe, Discord, Cloudflare, Meta, LinkedIn, Shopify
 
 ---
 
@@ -320,7 +328,6 @@ Work through these end-to-end. Diagram, document tradeoffs, estimate capacity.
 
 - Netflix Tech Blog — netflixtechblog.com
 - Uber Engineering — eng.uber.com
-- Airbnb Engineering — medium.com/airbnb-engineering
 - Stripe Engineering — stripe.com/blog/engineering
 - Discord Engineering — discord.com/blog
 - Cloudflare Blog — blog.cloudflare.com
@@ -334,14 +341,23 @@ Work through these end-to-end. Diagram, document tradeoffs, estimate capacity.
 
 ---
 
+## Newsletters
+
+- **The Pragmatic Engineer** — Gergely Orosz (architecture decisions at real companies, hiring trends)
+- **ByteByteGo Newsletter** — Alex Xu (weekly system design)
+- **High Scalability** — archive remains valuable
+- **InfoQ** — engineering culture and architecture
+
+---
+
 ## YouTube Channels
 
 - ByteByteGo — Alex Xu
 - Gaurav Sen
-- Arpit Bhayani — system design + database internals
+- Asli Engineering by Arpit Bhayani — system design + database internals
 - Hussein Nasser — networking, databases, backend
 - Jordan Has No Life — system design interviews
-- ThePrimeagen — general engineering culture
+- CodeKarle — system design case studies
 - TechWorld with Nana — DevOps, Kubernetes
 
 ---
